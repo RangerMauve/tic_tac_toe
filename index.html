@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<title>Tic Tac Toe</title>
+<link rel="stylesheet" href="index.css">
+<main>
+	<h1>Tic Tac Toe</h1>
+	<div class="rows">
+		<div class="row" rv-each-row="grid">
+			<div class="block" rv-each-block="row" rv-data-x="block.x" rv-data-y="block.y" rv-on-click="choose_block" rv-class-win="block.win">
+				{block.type}
+			</div>
+		</div>
+	</div>
+	<div class="controls">
+		<button rv-on-click="reset">Reset</button>
+		<div>Turn: {current}</div>
+		<div rv-if="winner">Winner: {winner}</div>
+	</div>
+</main>
+<script src="rivets.min.js"></script>
+<script src="index.js"></script>
