@@ -11,6 +11,10 @@ var model = {
 	reset: reset
 }
 
+rivets.formatters.not = function (value) {
+	return !value;
+}
+
 var main = document.querySelector("main");
 
 rivets.bind(main, model);

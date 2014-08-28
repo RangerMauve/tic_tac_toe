@@ -12,8 +12,8 @@
 	</div>
 	<div class="controls">
 		<button rv-on-click="reset">Reset</button>
-		<div>Turn: {current}</div>
-		<div rv-if="winner">Winner: {winner}</div>
+		<div rv-show="winner | not">Turn: {current}</div>
+		<div rv-show="winner">Winner: {winner}</div>
 	</div>
 </main>
 <script src="rivets.min.js"></script>
